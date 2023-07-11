@@ -1,6 +1,7 @@
 # import libraries
 from pickle import dump, load
 import pandas as pd
+import sklearn
 
 
 def split_data(df: pd.DataFrame):
