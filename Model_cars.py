@@ -1,8 +1,6 @@
 # import libraries
 from pickle import dump, load
 import pandas as pd
-from sklearn import metrics
-from sklearn.ensemble import RandomForestRegressor
 
 
 def split_data(df: pd.DataFrame):
