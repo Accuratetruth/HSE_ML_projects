@@ -36,7 +36,7 @@ def write_user_data(df):
 
 def write_prediction(prediction):
     st.write("## Стоимость")
-    st.write(prediction)
+    st.write(round(prediction,3))
 
 def process_side_bar_inputs():
     st.sidebar.header('Заданные пользователем параметры')
