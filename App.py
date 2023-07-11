@@ -48,9 +48,10 @@ def process_side_bar_inputs():
     # preprocessed_X_df = preprocess_data(full_X_df, test=False)
 
     # user_X_df = preprocessed_X_df[:1]
-    write_user_data(full_X_df)
+    user_X_df = full_X_df[:1]
+    write_user_data(user_X_df)
 
-    prediction = load_model_and_predict(full_X_df)
+    prediction = load_model_and_predict(user_X_df)
     write_prediction(prediction)
 
 
