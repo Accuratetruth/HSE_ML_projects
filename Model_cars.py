@@ -7,14 +7,14 @@ import sklearn
 def split_data(df: pd.DataFrame):
     y = df['selling_price']
     X = df[["max_power", "year", "torque", "km_driven", "mileage", "engine", "transmission",
-            "seats", "seller_type"]]
+            "seats", "seller_type", "owner", "fuel"]]
 
     return X, y
 
 def open_data(path="cars_dataset.csv"):
     df = pd.read_csv(path)
     df = df[['selling_price', "max_power", "year", "torque", "km_driven", "mileage", "engine", "transmission",
-            "seats", "seller_type"]]
+            "seats", "seller_type", "owner","fuel"]]
 
     return df
 
@@ -26,7 +26,7 @@ def preprocess_data(df: pd.DataFrame, test=True):
     else:
         X_df = df
 
-    to_encode = ['owner']
+    to_encode = ['owner', 'fuel']
     for col in to_encode:
         dummy = pd.get_dummies(X_df[col], prefix=col)
         X_df = pd.concat([X_df, dummy], axis=1)
