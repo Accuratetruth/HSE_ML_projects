@@ -7,7 +7,7 @@ import sklearn
 def split_data(df: pd.DataFrame):
     y = df['selling_price']
     X = df[["max_power", "year", "torque", "km_driven", "mileage", "engine", "transmission",
-            "seats", "seller_type"]]
+            "seats", "seller_type"]] 
 
     return X, y
 
