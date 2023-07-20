@@ -32,7 +32,7 @@ pandas, scikit-learn, matplotlib, plotly, numpy, seaborn
 
 ### Framework
 
-Machine learning solution was presented as a web application using Streamlit framework. App here
+Machine learning solution was presented as a web application using Streamlit framework. App [here]([https://github.com/Accuratetruth/Practicum-Projects/tree/master/1.Research%20of%20the%20borrowers'%20reliability](https://hsemlprojects-k4ggg1t99sr.streamlit.app/)) 
 
 ### Files
  - Аpp.py: streamlit app file
