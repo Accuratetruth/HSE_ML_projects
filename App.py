@@ -45,9 +45,7 @@ def process_side_bar_inputs():
     train_df = open_data()
     train_X_df, _ = split_data(train_df)
     full_X_df = pd.concat((user_input_df, train_X_df), axis=0)
-    # preprocessed_X_df = preprocess_data(full_X_df, test=False)
 
-    # user_X_df = preprocessed_X_df[:1]
     user_X_df = full_X_df[:1]
     write_user_data(user_X_df)
 
@@ -62,8 +60,6 @@ def sidebar_input_features():
                              step=10)
     seller_type = st.sidebar.selectbox("Продавец", ("Частник", "Дилер"))
     transmission = st.sidebar.selectbox("Тип трансмиссии", ("Механика", "Автомат"))
-    # owner = st.sidebar.selectbox("Какой по счету хозяин", ("Первый", "Второй", "Третий", "Четвертый и более",
-    #                                                        "Машина с тест-драйва"))
     mileage = st.sidebar.slider("Расход топлива", min_value=0, max_value=60, value=20,
                             step=1)
     engine = st.sidebar.slider("Рабочий объем двигателя", min_value=600, max_value=3700, value=800,
@@ -77,11 +73,6 @@ def sidebar_input_features():
         "Дилер": 0,
         "Механика": 1,
         "Автомат": 0,
-        # "Первый": "First Owner",
-        # "Второй": "Second Owner",
-        # "Третий": "Third Owner",
-        # "Четвертый и более": "Fourth & Above Owner",
-        # "Машина с тест-драйва": "Test Drive Car",
     }
 
     data = {
