@@ -1,2 +1,2 @@
 # HSE_ML_projects
-Этот репозиторий содержит проект по курсу "Разработка ML сервиса: от идеи к прототипу"
+This repository contains the project from training course "ML service development: from idea to prototype"
